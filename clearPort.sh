@@ -1,4 +1,6 @@
 #!/bin/bash
+echo -e "\n\bThis script uses sudo permission to close port\n\b"
+
 number_regex='^[0-9]+$'
 
 read -rp "Enter the port to close: " port
@@ -16,8 +18,6 @@ then
 	echo "Port number is already open. Nothing to do here."
 	exit
 fi
-
-echo -e "\n\bThis script uses sudo permission to close port\n\b"
 
 sudo kill $pid
 
